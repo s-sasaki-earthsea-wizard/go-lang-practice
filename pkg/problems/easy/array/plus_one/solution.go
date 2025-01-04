@@ -1,9 +1,6 @@
-package main
+package plus_one
 
-import "fmt"
-
-// Plus one
-func plusOne(digits []int) []int {
+func PlusOne(digits []int) []int {
 	n := len(digits)
 
 	// Iterate from the end of the array
@@ -21,17 +18,4 @@ func plusOne(digits []int) []int {
 	result := make([]int, n+1)
 	result[0] = 1
 	return result
-
-}
-
-func main() {
-	// Arrays for testing
-	nums1 := []int{1, 2, 3}
-	result1 := plusOne(nums1)
-
-	nums2 := []int{9, 9, 9}
-	result2 := plusOne(nums2)
-
-	fmt.Println(result1)
-	fmt.Println(result2)
 }
