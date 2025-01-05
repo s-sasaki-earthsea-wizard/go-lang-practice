@@ -14,10 +14,7 @@ func validateBST(node *types.TreeNode, min, max *int) bool {
 	}
 
 	// If there is a minimum value and the root value is less than the minimum value, return false
-	if min != nil && node.Val <= *min {
-		return false
-	}
-	if max != nil && node.Val >= *max {
+	if min != nil && node.Val <= *min || max != nil && node.Val >= *max {
 		return false
 	}
 
